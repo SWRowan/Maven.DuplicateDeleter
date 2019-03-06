@@ -18,7 +18,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
     @Override
     public Integer[] removeDuplicates(int maxNumberOfDuplications) {
         RowList rowList = new RowList(intArray);
-        rowList.removeDupesMaxNum(maxNumberOfDuplications, rowList, intArray);
+        rowList.removeDupesMaxNum(maxNumberOfDuplications);
         return getIntegersArr(rowList);
     }
 
@@ -26,7 +26,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
     @Override
     public Integer[] removeDuplicatesExactly(int exactNumberOfDuplications) {
         RowList rowList = new RowList(intArray);
-        rowList.removeDupesExactNum(exactNumberOfDuplications, rowList, intArray);
+        rowList.removeDupesExactNum(exactNumberOfDuplications);
         return getIntegersArr(rowList);
     }
 

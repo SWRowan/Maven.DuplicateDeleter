@@ -18,14 +18,14 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
     @Override
     public String[] removeDuplicates(int maxNumberOfDuplications) {
         RowList rowList = new RowList(strArray);
-        rowList.removeDupesMaxNum(maxNumberOfDuplications, rowList, strArray);
+        rowList.removeDupesMaxNum(maxNumberOfDuplications);
         return getStringArr(rowList);
     }
 
     @Override
     public String[] removeDuplicatesExactly(int exactNumberOfDuplications) {
         RowList rowList = new RowList(strArray);
-        rowList.removeDupesExactNum(exactNumberOfDuplications, rowList, strArray);
+        rowList.removeDupesExactNum(exactNumberOfDuplications);
         return getStringArr(rowList);
     }
 

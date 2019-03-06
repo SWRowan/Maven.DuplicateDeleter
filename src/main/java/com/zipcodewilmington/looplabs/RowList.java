@@ -50,18 +50,18 @@ public class RowList<T> {
     }
 
 
-    public void removeDupesMaxNum(int maxNumberOfDuplications, RowList rowList, Object[] arr) {
-        for (Object o : arr) {
-            if (rowList.countDups(o) >= maxNumberOfDuplications) {
-                rowList.removeAll(o);
+    public void removeDupesMaxNum(int maxNumberOfDuplications) {
+        for (Object o : rowList) {
+            if (countDups(o) >= maxNumberOfDuplications) {
+                removeAll(o);
             }
         }
     }
 
-    public void removeDupesExactNum(int exactNumberOfDuplications, RowList rowList, Object[] arr) {
-        for (Object o : arr) {
-            if (rowList.countDups(o) == exactNumberOfDuplications) {
-                rowList.removeAll(o);
+    public void removeDupesExactNum(int exactNumberOfDuplications) {
+        for (Object o : rowList) {
+            if (countDups(o) == exactNumberOfDuplications) {
+                removeAll(o);
             }
         }
     }
